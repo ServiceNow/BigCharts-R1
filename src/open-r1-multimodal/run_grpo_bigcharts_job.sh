@@ -9,20 +9,9 @@ conda activate /mnt/home/.conda/envs/vlm-r1
 /mnt/home/.conda/envs/vlm-r1/bin/wandb login 0c07e7d1f954810b6028d2e41d573a5190643e88
 
 export DEBUG_MODE="true"
-# export CUDA_VISIBLE_DEVICES=4,5,6,7
-# "/mnt/tmp/rl_data/ChartQA/ChartQA Dataset/train/png/"  "/mnt/tmp/rl_data/bigmathvis/compiled_datasets/rl_data_small/images/"
-# data_config/chartqa.yaml
-# --max_prompt_length 1024
-#  --reward_funcs "accuracy" "format" \
+RUN_NAME="Qwen2.5-VL-3B-GRPO-All-RL-Test"
 
-# /mnt/tmp/rl_data/outputs/bigcharts_all/qwen2_5_vl-3b_sft_cot_2/checkpoint-21599-Qwen2.5-VL/ \
-# Qwen/Qwen2.5-VL-3B-Instruct
-#RUN_NAME="Qwen2.5-VL-3B-GRPO-ChartQA-RL-R1-R2-From-SFT-CoT-2-discrete-Gemini-Format"
-#    --max-completion-length 2048 \
-# "format" "accuracy"
-RUN_NAME="Rebuttal-Qwen2.5-VL-3B-GRPO-All-RL-Exact-Acc"
-
-export LOG_PATH="/mnt/tmp/rl_data/outputs/bigcharts_all/Rebuttal-Qwen2.5-VL-3B-GRPO-All-RL-Exact-Acc/debug_log_reasoning_$RUN_NAME.txt"
+export LOG_PATH="/mnt/tmp/rl_data/outputs/bigcharts_all/Qwen2.5-VL-3B-GRPO-All-RL-Test/debug_log_reasoning_$RUN_NAME.txt"
 
 /mnt/home/.conda/envs/vlm-r1/bin/torchrun --nproc_per_node="8" \
     --nnodes="1" \
