@@ -1,0 +1,2 @@
+datasets:
+    - json_path: /mnt/tmp/rl_data/bigmathvis/compiled_datasets/rl_data_small/rl_train_all_final_filtered_further_without_synthetic.json
