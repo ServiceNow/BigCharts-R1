@@ -125,11 +125,12 @@ Here are some example steps to train
 
 4. Configure [src/open-r1-multimodal/run_grpo_bigcharts_job.sh](src/open-r1-multimodal/run_grpo_bigcharts_job.sh): Modify the dataset_name and image_root variables within the [src/open-r1-multimodal/run_grpo_bigcharts_job.sh](src/open-r1-multimodal/run_grpo_bigcharts_job.sh) script to match your setup. Specifically:
 
-  - dataset_name: Set this to "data_config/chartqa.yaml" (or whatever name you're using for your RL dataset configuration).
+  - dataset_name: Set this to "data_config/rl_data.yaml" (or whatever name you're using for your RL dataset configuration).
   - image_root: Ensure this points to the directory containing your training images.
-
+  - Make sure to update the other relevant parameters in the file (e.g., HF_HOME) as well. 
+ 
 5. Run the following command to start the process:
-``bash src/open-r1-multimodal/run_grpo_chartqa.sh``
+``bash src/open-r1-multimodal/run_grpo_bigcharts_job.sh``
 
 ## 📊 Evaluation
 
