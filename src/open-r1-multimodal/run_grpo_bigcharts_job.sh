@@ -1,19 +1,21 @@
-export HF_HOME=/mnt/tmp/hf_cache
+export HF_HOME=your_hf_cache_dir # make sure to set this
+export WANDB_TOKEN=your_wandb_token # make sure to set this
 
-cd /mnt/home/rl_exp/VLM-R1/src/open-r1-multimodal
 
-conda init
-. ~/.bashrc
-source ~/.bashrc
-conda activate /mnt/home/.conda/envs/vlm-r1
-/mnt/home/.conda/envs/vlm-r1/bin/wandb login 0c07e7d1f954810b6028d2e41d573a5190643e88
+conda activate bigcharts-r1
+wandb login $WANDB_TOKEN
 
 export DEBUG_MODE="true"
 RUN_NAME="Qwen2.5-VL-3B-GRPO-All-RL-Test"
 
 export LOG_PATH="/mnt/tmp/rl_data/outputs/bigcharts_all/Qwen2.5-VL-3B-GRPO-All-RL-Test/debug_log_reasoning_$RUN_NAME.txt"
 
-/mnt/home/.conda/envs/vlm-r1/bin/torchrun --nproc_per_node="8" \
+
+cd BigCharts-R1/src/open-r1-multimodal
+
+# change nproc_per_node to your number of gpus. 
+
+torchrun --nproc_per_node="8" \
     --nnodes="1" \
     --node_rank="0" \
     --master_addr="127.0.0.1" \

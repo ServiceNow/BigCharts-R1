@@ -6,7 +6,7 @@ src/open_r1/configs.py
 src/open_r1/evaluate.py
 src/open_r1/generate.py
 src/open_r1/grpo.py
-src/open_r1/grpo_chartqa.py
+src/open_r1/grpo_bigcharts.py
 src/open_r1/grpo_rec.py
 src/open_r1/sft.py
 src/open_r1.egg-info/PKG-INFO
