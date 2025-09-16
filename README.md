@@ -121,9 +121,9 @@ Here are some example steps to train
 ]
 ```
 
-3. Configure [chartqa.yaml](src/open-r1-multimodal/data_config/chartqa.yaml): Update the json_path in the [chartqa.yaml](src/open-r1-multimodal/data_config/chartqa.yaml) configuration file to point to the location of your reformatted JSON data.
+3. Configure [chartqa.yaml](src/open-r1-multimodal/data_config/rl_data.yaml): Update the json_path in the [chartqa.yaml](src/open-r1-multimodal/data_config/rl_data.yaml) configuration file to point to the location of your reformatted JSON data.
 
-4. Configure [src/open-r1-multimodal/run_grpo_chartqa.sh](src/open-r1-multimodal/run_grpo_chartqa.sh): Modify the dataset_name and image_root variables within the [src/open-r1-multimodal/run_grpo_chartqa.sh](src/open-r1-multimodal/run_grpo_chartqa.sh) script to match your setup. Specifically:
+4. Configure [src/open-r1-multimodal/run_grpo_bigcharts_job.sh](src/open-r1-multimodal/run_grpo_bigcharts_job.sh): Modify the dataset_name and image_root variables within the [src/open-r1-multimodal/run_grpo_bigcharts_job.sh](src/open-r1-multimodal/run_grpo_bigcharts_job.sh) script to match your setup. Specifically:
 
   - dataset_name: Set this to "data_config/chartqa.yaml" (or whatever name you're using for your RL dataset configuration).
   - image_root: Ensure this points to the directory containing your training images.
