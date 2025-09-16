@@ -121,7 +121,7 @@ Here are some example steps to train
 ]
 ```
 
-3. Configure [chartqa.yaml](src/open-r1-multimodal/data_config/rl_data.yaml): Update the json_path in the [chartqa.yaml](src/open-r1-multimodal/data_config/rl_data.yaml) configuration file to point to the location of your reformatted JSON data.
+3. Configure [rl_data.yaml](src/open-r1-multimodal/data_config/rl_data.yaml): Update the json_path in the [rl_data.yaml](src/open-r1-multimodal/data_config/rl_data.yaml) configuration file to point to the location of your reformatted JSON data.
 
 4. Configure [src/open-r1-multimodal/run_grpo_bigcharts_job.sh](src/open-r1-multimodal/run_grpo_bigcharts_job.sh): Modify the dataset_name and image_root variables within the [src/open-r1-multimodal/run_grpo_bigcharts_job.sh](src/open-r1-multimodal/run_grpo_bigcharts_job.sh) script to match your setup. Specifically:
 
